@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CareerSaathi — AI-Powered Career Advisor for Indian Students. Personalized guidance for Class 10 onwards.">
+<meta name="theme-color" content="#060C1A">
+<title>CareerSaathi — AI Career Advisor for India</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- ════ LANDING ════ -->
+<section id="screen-landing" class="screen active">
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-glow2"></div>
+
+  <nav class="landing-nav">
+    <div class="logo"><div class="logo-dot"></div>CareerSaathi</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <button class="btn-nav" onclick="navigate('onboarding')">Get Started</button>
+    </div>
+  </nav>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-flag">🇮🇳</span>
+      <span>AI-Powered Career Advisor for India</span>
+      <span class="badge-new">NEW</span>
+    </div>
+
+    <h1 class="hero-title">
+      Your Smartest Guide<br>to <span class="hero-highlight">Career & Education</span>
+    </h1>
+
+    <p class="hero-sub">
+      Personalized career guidance powered by Claude AI — built for Indian students from Class 10 onwards. We consider your interests, finances, location & learning style.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="navigate('onboarding')">
+        <span>Apna Career Discover Karo</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="btn-ghost" onclick="scrollToFeatures()">
+        See Features
+      </button>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Free to use
+      </div>
+      <div class="trust-sep">·</div>
+      <div class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        No signup required
+      </div>
+      <div class="trust-sep">·</div>
+      <div class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Hindi &amp; English
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-row" id="features">
+    <div class="stat">
+      <div class="stat-num">50K+</div>
+      <div class="stat-label">Students Guided</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat">
+      <div class="stat-num">200+</div>
+      <div class="stat-label">Career Paths</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Scholarships</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat">
+      <div class="stat-num">28</div>
+      <div class="stat-label">States Covered</div>
+    </div>
+  </div>
+
+  <div class="feature-cards" id="about">
+    <div class="fc">
+      <div class="fc-icon">🤖</div>
+      <div class="fc-title">Claude AI Powered Chat</div>
+      <div class="fc-desc">Ask anything in Hindi, English or Hinglish. Get real, personalized advice powered by Anthropic's Claude.</div>
+    </div>
+    <div class="fc">
+      <div class="fc-icon">🗺️</div>
+      <div class="fc-title">Personalized Roadmaps</div>
+      <div class="fc-desc">Step-by-step career paths tailored to your stream, location, and budget. Real Indian colleges & exams.</div>
+    </div>
+    <div class="fc">
+      <div class="fc-icon">💼</div>
+      <div class="fc-title">Scholarships & Jobs</div>
+      <div class="fc-desc">NSP, PM Vidyalakshmi, KVPY and 500+ scholarships. Fresher jobs, internships and govt opportunities.</div>
+    </div>
+    <div class="fc">
+      <div class="fc-icon">🕸️</div>
+      <div class="fc-title">Knowledge Graph</div>
+      <div class="fc-desc">Visualize how degrees connect to skills, roles and salaries. Interactive career map for every stream.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ ONBOARDING ════ -->
+<section id="screen-onboarding" class="screen">
+  <div class="ob-bg"></div>
+  <div class="obc">
+    <div class="ob-header">
+      <div class="logo" style="justify-content:center;margin-bottom:0">
+        <div class="logo-dot"></div>CareerSaathi
+      </div>
+    </div>
+
+    <div class="prog-wrap">
+      <div class="prog-bar">
+        <div class="prog-seg" id="p1"></div>
+        <div class="prog-seg" id="p2"></div>
+        <div class="prog-seg" id="p3"></div>
+      </div>
+      <div class="prog-labels">
+        <span id="pl1">Personal Info</span>
+        <span id="pl2">Academics</span>
+        <span id="pl3">Interests</span>
+      </div>
+    </div>
+
+    <!-- Step 1 -->
+    <div id="s1">
+      <div class="step-title">Apna Introduction Do 👋</div>
+      <div class="step-sub">Basic information fill karo — yahi se tumhara profile banega</div>
+      <div class="fg">
+        <label class="fl">Full Name</label>
+        <input type="text" class="fi" id="iname" placeholder="e.g. Rahul Sharma" autocomplete="name">
+      </div>
+      <div class="fr">
+        <div class="fg">
+          <label class="fl">Class / Year</label>
+          <select class="fs" id="iclass">
+            <option value="">Select</option>
+            <option>Class 10</option><option>Class 11</option><option>Class 12</option>
+            <option>1st Year College</option><option>2nd Year College</option>
+            <option>3rd Year College</option><option>Final Year</option><option>Graduate</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl">Stream</label>
+          <select class="fs" id="istream">
+            <option value="">Select</option>
+            <option>Science (PCM)</option><option>Science (PCB)</option><option>Commerce</option>
+            <option>Arts/Humanities</option><option>Computer Science</option><option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="fr">
+        <div class="fg">
+          <label class="fl">State</label>
+          <select class="fs" id="istate">
+            <option value="">Select State</option>
+            <option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option>
+            <option>Delhi</option><option>Gujarat</option><option>Haryana</option>
+            <option>Himachal Pradesh</option><option>J&amp;K</option><option>Karnataka</option>
+            <option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option>
+            <option>Odisha</option><option>Punjab</option><option>Rajasthan</option>
+            <option>Tamil Nadu</option><option>Telangana</option><option>UP</option>
+            <option>Uttarakhand</option><option>West Bengal</option><option>Other</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label class="fl">Area Type</label>
+          <select class="fs" id="iarea">
+            <option>Urban</option><option>Semi-Urban</option><option>Rural</option>
+          </select>
+        </div>
+      </div>
+      <div class="br">
+        <button class="btn-primary" onclick="ns(1)">
+          Next <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="s2" style="display:none">
+      <div class="step-title">Academic Background 📚</div>
+      <div class="step-sub">Ye data tumhari best-fit career find karne mein help karega</div>
+      <div class="fr">
+        <div class="fg">
+          <label class="fl">Last % / CGPA</label>
+          <input type="text" class="fi" id="imarks" placeholder="e.g. 82% or 7.5">
+        </div>
+        <div class="fg">
+          <label class="fl">Annual Family Income</label>
+          <select class="fs" id="iincome">
+            <option>Below ₹2.5 LPA</option><option>₹2.5 – 5 LPA</option>
+            <option>₹5 – 10 LPA</option><option>₹10 – 20 LPA</option><option>Above ₹20 LPA</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg">
+        <label class="fl">Competitive Exam Target</label>
+        <select class="fs" id="iexam">
+          <option>JEE Mains/Advanced</option><option>NEET</option><option>UPSC / State PSC</option>
+          <option>CUET</option><option>CAT/MBA</option><option>SSC/Banking</option>
+          <option>GATE</option><option>NDA / Defence</option><option>None / Not Sure</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label class="fl">Career Budget</label>
+        <select class="fs" id="ibudget">
+          <option value="low">Low — Need scholarship / free courses</option>
+          <option value="medium">Medium — Affordable colleges / online</option>
+          <option value="high">High — Premier institutes (IIT/IIM etc.)</option>
+        </select>
+      </div>
+      <div class="br">
+        <button class="btn-sec" onclick="ps(2)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back
+        </button>
+        <button class="btn-primary" onclick="ns(2)">
+          Next <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="s3" style="display:none">
+      <div class="step-title">Interests Select Karo ✨</div>
+      <div class="step-sub">Jo bhi pasand ho sab select karo — multiple select allowed hai</div>
+      <div class="ig" id="igrid"></div>
+      <div id="int-warn" class="int-warn" style="display:none">⚠️ Please select at least one interest</div>
+      <div class="br">
+        <button class="btn-sec" onclick="ps(3)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back
+        </button>
+        <button class="btn-primary" onclick="finOb()">
+          Psychometric Test
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PSYCHOMETRIC QUIZ ════ -->
+<section id="screen-psycho" class="screen">
+  <div class="ob-bg"></div>
+  <div class="qc">
+    <div class="qp">
+      <span class="qnum" id="qnum">1 / 6</span>
+      <div class="qbar"><div class="qfill" id="qfill" style="width:16%"></div></div>
+      <span class="qnum" id="qtime">~2 min</span>
+    </div>
+    <div class="q-category" id="qcat">Personality</div>
+    <div id="qqq" class="qq-text"></div>
+    <div id="qqqh" class="qqh"></div>
+    <div class="qopts" id="qopts"></div>
+    <div class="q-skip" onclick="skipQ()">Skip this question →</div>
+  </div>
+</section>
+
+<!-- ════ RESULT ════ -->
+<section id="screen-result" class="screen">
+  <div class="ob-bg"></div>
+  <div class="rc">
+    <div class="rc-confetti" id="confetti"></div>
+    <div class="re" id="re">🧠</div>
+    <div class="rc-badge">Your Career Profile</div>
+    <div class="rt" id="rtype">Tech Innovator</div>
+    <div class="rd" id="rdesc"></div>
+    <div class="ctags" id="ctags"></div>
+    <div class="rc-match">
+      <div class="rc-match-bar">
+        <div class="rc-match-fill" id="rmatchfill"></div>
+      </div>
+      <div class="rc-match-label" id="rmatchlabel">Calculating match...</div>
+    </div>
+    <button class="btn-primary btn-wide" onclick="navigate('dashboard')">
+      Dashboard Kholo
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ════ DASHBOARD ════ -->
+<section id="screen-dashboard" class="screen">
+  <div class="dnav" id="dnav">
+    <div class="dlogo" onclick="navigate('landing')">⭐ CareerSaathi</div>
+    <div class="ntabs" id="ntabs">
+      <button class="ntab active" onclick="showTab('home')">🏠 Home</button>
+      <button class="ntab" onclick="showTab('chat')">🤖 AI Chat</button>
+      <button class="ntab" onclick="showTab('roadmap')">🗺️ Roadmap</button>
+      <button class="ntab" onclick="showTab('graph')">🕸️ Knowledge</button>
+      <button class="ntab" onclick="showTab('opp')">💼 Opportunities</button>
+      <button class="ntab" onclick="showTab('mentors')">👨‍🏫 Mentors</button>
+    </div>
+    <div class="nav-right">
+      <button class="ltgl" onclick="toggleLang()" title="Toggle Language">🌐 हिं / EN</button>
+      <button class="mob-menu-btn" onclick="toggleMobMenu()" id="mobMenuBtn">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <div class="mob-nav" id="mobNav">
+    <button onclick="showTab('home');toggleMobMenu()">🏠 Home</button>
+    <button onclick="showTab('chat');toggleMobMenu()">🤖 AI Chat</button>
+    <button onclick="showTab('roadmap');toggleMobMenu()">🗺️ Roadmap</button>
+    <button onclick="showTab('graph');toggleMobMenu()">🕸️ Knowledge Graph</button>
+    <button onclick="showTab('opp');toggleMobMenu()">💼 Opportunities</button>
+    <button onclick="showTab('mentors');toggleMobMenu()">👨‍🏫 Mentors</button>
+  </div>
+
+  <div class="dc">
+
+    <!-- HOME TAB -->
+    <div class="tc active" id="tab-home">
+      <div class="wbanner">
+        <div class="wt">
+          <div class="w-eyebrow">Welcome back</div>
+          <h2 id="dwelcome">Namaste! 👋</h2>
+          <p id="dprofile">Your personalised career journey starts here</p>
+          <div class="w-actions">
+            <button class="btn-primary btn-sm" onclick="showTab('chat')">Ask AI Advisor →</button>
+          </div>
+        </div>
+        <div class="we">🎓</div>
+      </div>
+
+      <div class="section-header">
+        <div class="sh-title">Quick Access</div>
+      </div>
+
+      <div class="dgrid">
+        <div class="dcard" onclick="showTab('chat')">
+          <div class="dci">🤖</div>
+          <div class="dct">AI Career Chat</div>
+          <div class="dcs">Koi bhi sawaal pucho</div>
+          <div class="dcarrow">→</div>
+        </div>
+        <div class="dcard" onclick="showTab('roadmap')">
+          <div class="dci">🗺️</div>
+          <div class="dct">Career Roadmap</div>
+          <div class="dcs">Step-by-step path</div>
+          <div class="dcarrow">→</div>
+        </div>
+        <div class="dcard" onclick="showTab('graph')">
+          <div class="dci">🕸️</div>
+          <div class="dct">Knowledge Graph</div>
+          <div class="dcs">Degree → Job map</div>
+          <div class="dcarrow">→</div>
+        </div>
+        <div class="dcard" onclick="showTab('opp')">
+          <div class="dci">💼</div>
+          <div class="dct">Opportunities</div>
+          <div class="dcs">Jobs, scholarships</div>
+          <div class="dcarrow">→</div>
+        </div>
+        <div class="dcard" onclick="showTab('mentors')">
+          <div class="dci">👨‍🏫</div>
+          <div class="dct">Find Mentors</div>
+          <div class="dcs">Connect with seniors</div>
+          <div class="dcarrow">→</div>
+        </div>
+        <div class="dcard dcard-match">
+          <div class="dci">📊</div>
+          <div class="dct" id="mscore">—% Match</div>
+          <div class="dcs" id="mtype">Calculating...</div>
+          <div class="dcarrow">★</div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <div class="sh-title">Your Profile</div>
+        <button class="sh-action" onclick="navigate('onboarding')">Edit Profile</button>
+      </div>
+
+      <div class="profile-card">
+        <div id="psummary"></div>
+      </div>
+
+      <div class="section-header" style="margin-top:2rem">
+        <div class="sh-title">Today's Tip</div>
+      </div>
+      <div class="tip-card" id="daytip"></div>
+    </div>
+
+    <!-- CHAT TAB -->
+    <div class="tc" id="tab-chat">
+      <div class="sh">
+        <div class="st">🤖 AI Career Advisor</div>
+        <div class="ss">Claude AI powered — koi bhi career question pucho (Hindi / English / Hinglish)</div>
+      </div>
+
+      <div id="api-warning" class="api-banner" style="display:none">
+        <div class="api-banner-icon">⚠️</div>
+        <div>
+          <strong>API Key Required</strong><br>
+          <span>Enter your Anthropic API key to activate AI chat. <a href="https://console.anthropic.com" target="_blank">Get one free →</a></span>
+        </div>
+        <button onclick="showApiModal()">Add Key</button>
+      </div>
+
+      <div class="chat-box">
+        <div class="ch">
+          <div class="cav">🤖</div>
+          <div>
+            <div class="cn">CareerSaathi AI</div>
+            <div class="cs" id="cs-status">● Online — Powered by Claude</div>
+          </div>
+          <div class="chat-actions">
+            <button class="chat-act-btn" onclick="clearChat()" title="Clear chat">🗑️</button>
+            <button class="chat-act-btn" onclick="showApiModal()" title="API Settings">⚙️</button>
+          </div>
+        </div>
+
+        <div class="qqs">
+          <button class="qq-chip" onclick="quickQ(this)">Best career for PCM?</button>
+          <button class="qq-chip" onclick="quickQ(this)">Low budget mein best college?</button>
+          <button class="qq-chip" onclick="quickQ(this)">Govt job ki tayari kaise?</button>
+          <button class="qq-chip" onclick="quickQ(this)">Data Science roadmap</button>
+          <button class="qq-chip" onclick="quickQ(this)">NSP scholarship eligibility</button>
+          <button class="qq-chip" onclick="quickQ(this)">MBA vs M.Tech salary?</button>
+          <button class="qq-chip" onclick="quickQ(this)">UPSC preparation strategy</button>
+          <button class="qq-chip" onclick="quickQ(this)">Top engineering colleges India</button>
+        </div>
+
+        <div class="cms" id="cms">
+          <div class="msg ai">
+            <div class="msg-avatar">🤖</div>
+            <div class="msg-content">
+              <div class="msdr">CareerSaathi AI</div>
+              <div class="mb">Namaste! 🙏 Main CareerSaathi AI hoon — India ke students ke liye ek personalised career advisor.<br><br>Tum mujhse koi bhi career, education, scholarship, ya job-related sawaal kar sakte ho. Seedha <strong>Hindi, English, ya Hinglish</strong> mein pucho — main samjhunga!</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ciw">
+          <input type="text" class="ci" id="cinput"
+            placeholder="Type your question... (Hindi/English/Hinglish)"
+            onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}"
+            autocomplete="off">
+          <button class="csend" onclick="sendChat()" id="csend">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROADMAP TAB -->
+    <div class="tc" id="tab-roadmap">
+      <div class="sh">
+        <div class="st">🗺️ Career Roadmap Generator</div>
+        <div class="ss">Koi bhi career choose karo — AI tumhara personalized roadmap banayega</div>
+      </div>
+      <div class="rm-suggestions">
+        <span class="rm-sug-label">Popular:</span>
+        <button class="rm-sug" onclick="setRM('Data Scientist')">Data Scientist</button>
+        <button class="rm-sug" onclick="setRM('IAS Officer')">IAS Officer</button>
+        <button class="rm-sug" onclick="setRM('UX Designer')">UX Designer</button>
+        <button class="rm-sug" onclick="setRM('CA')">CA</button>
+        <button class="rm-sug" onclick="setRM('Software Engineer')">Software Engineer</button>
+        <button class="rm-sug" onclick="setRM('Doctor (MBBS)')">Doctor</button>
+      </div>
+      <div class="ri">
+        <input type="text" class="fi" id="rminput"
+          placeholder="Type a career e.g. Data Scientist, IAS Officer, UX Designer..."
+          onkeydown="if(event.key==='Enter')genRoadmap()">
+        <button class="btn-primary" onclick="genRoadmap()" id="rmbtn">
+          Generate →
+        </button>
+      </div>
+      <div id="rmout"></div>
+    </div>
+
+    <!-- KNOWLEDGE GRAPH TAB -->
+    <div class="tc" id="tab-graph">
+      <div class="sh">
+        <div class="st">🕸️ Career Knowledge Graph</div>
+        <div class="ss">Degree → Skills → Job Roles → Salary — nodes pe click karo details ke liye</div>
+      </div>
+      <div class="graph-controls">
+        <button class="graph-filter active" onclick="filterGraph('all',this)">All</button>
+        <button class="graph-filter" onclick="filterGraph('tech',this)">💻 Tech</button>
+        <button class="graph-filter" onclick="filterGraph('business',this)">💼 Business</button>
+        <button class="graph-filter" onclick="filterGraph('govt',this)">🏛️ Govt</button>
+      </div>
+      <div class="gbox">
+        <div class="gcanvas" id="kg"></div>
+        <div class="gleg">
+          <div class="gli"><div class="gld" style="background:#FF6B2C"></div> Degree</div>
+          <div class="gli"><div class="gld" style="background:#4F9FFF"></div> Skills</div>
+          <div class="gli"><div class="gld" style="background:#10D9A0"></div> Job Roles</div>
+          <div class="gli"><div class="gld" style="background:#FFD700"></div> Salary Tier</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPPORTUNITIES TAB -->
+    <div class="tc" id="tab-opp">
+      <div class="sh">
+        <div class="st">💼 Opportunities</div>
+        <div class="ss">Real jobs, scholarships &amp; internships — tumhare liye curated</div>
+      </div>
+      <div class="otabs">
+        <button class="otab active" onclick="showOpp('sc',this)">🎓 Scholarships</button>
+        <button class="otab" onclick="showOpp('jb',this)">💼 Jobs</button>
+        <button class="otab" onclick="showOpp('in',this)">🏢 Internships</button>
+      </div>
+      <div id="oppout"></div>
+    </div>
+
+    <!-- MENTORS TAB -->
+    <div class="tc" id="tab-mentors">
+      <div class="sh">
+        <div class="st">👨‍🏫 Mentor Network</div>
+        <div class="ss">Seniors, professionals &amp; counsellors se connect karo</div>
+      </div>
+      <div class="mentor-search">
+        <input type="text" class="fi" placeholder="Search by name or field..." id="mentor-search-input" oninput="filterMentors(this.value)">
+      </div>
+      <div class="mgrid" id="mgrid"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════ API KEY MODAL ════ -->
+<div class="modal-overlay" id="apiModal" onclick="closeApiModal(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">🔑 Anthropic API Key</div>
+      <button class="modal-close" onclick="closeApiModalBtn()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>AI Chat use karne ke liye apna Anthropic API key enter karo.</p>
+      <div class="fg" style="margin-top:1rem">
+        <label class="fl">API Key</label>
+        <input type="password" class="fi" id="apiKeyInput" placeholder="sk-ant-api03-...">
+      </div>
+      <div class="modal-info">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Key tumhare browser mein sirf locally save hota hai. Koi server pe nahi jaata.
+        <a href="https://console.anthropic.com" target="_blank">Get API key →</a>
+      </div>
+      <div class="br" style="margin-top:1.5rem;justify-content:flex-end">
+        <button class="btn-sec" onclick="closeApiModalBtn()">Cancel</button>
+        <button class="btn-primary" onclick="saveApiKey()">Save Key</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ TOOLTIP ════ -->
+<div class="node-tt" id="ntt"></div>
+
+<!-- ════ TOAST ════ -->
+<div class="toast" id="toast"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
